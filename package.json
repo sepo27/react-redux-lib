@@ -1,0 +1,24 @@
+{
+  "name": "@sepo/react-redux-lib",
+  "version": "0.0.0",
+  "description": "React redux toolbox",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sepo27/react-redux-lib.git"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "js"
+  ],
+  "author": "Sergey Poskachey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sepo27/react-redux-lib/issues"
+  },
+  "homepage": "https://github.com/sepo27/react-redux-lib#readme"
+}
