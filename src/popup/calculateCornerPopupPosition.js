@@ -1,8 +1,7 @@
 /* @flow */
 
-import type {PositionT, Dimensions} from '../../globalTypes';
-import {getViewportDimensions} from '../getViewportDimensions';
-import {getWindowScrollPosition} from '../getWindowScrollPosition';
+import type {PositionT, Dimensions} from '../globalTypes';
+import {getViewportDimensions, getWindowScrollPosition} from '../index';
 
 export const calculateCornerPopupPosition = (targetRect: ClientRect, popupDimensions: Dimensions): PositionT => {
   const

@@ -1,8 +1,12 @@
 /* @flow */
 
 import {calculateCornerPopupPosition} from './calculateCornerPopupPosition';
-import {mockViewportDimensions, unmockViewportDimensions} from '../../../test/mocks/mockViewportDimensions';
-import {mockWindowScrollPosition, unmockWindowScrollPosition} from '../../../test/mocks/mockWindowScrollPosition';
+import {
+  mockViewportDimensions,
+  unmockViewportDimensions,
+  mockWindowScrollPosition,
+  unmockWindowScrollPosition,
+} from '../index';
 
 const assertPopupPosition = ({target, popup, expectedPosition}) => {
   // $FlowFixMe

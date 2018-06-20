@@ -4,11 +4,11 @@ import * as React from 'react';
 import ReactDOM from 'react-dom';
 import cx from 'classnames';
 import styles from './Popup.scss';
-import {POPUP_CONTAINER_ID} from '../../constants';
-import {composeStylesTheme} from '../composeStylesTheme';
-import type {MouseEventHandler, ReactElementRef} from '../../globalTypes';
+import {composeStylesTheme} from '../index';
+import type {MouseEventHandler, ReactElementRef} from '../globalTypes';
 
-const rootEl = document.getElementById(POPUP_CONTAINER_ID);
+// TODO: parametrize
+const rootEl = document.getElementById('#popup');
 
 const ShowStatus = {
   HIDE: 0,
