@@ -1,0 +1,5 @@
+{
+  "moduleNameMapper": {
+    "^.*\\.s?css$": "<rootDir>/src/dev/emptyObject.js"
+  }
+}
