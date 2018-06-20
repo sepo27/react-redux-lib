@@ -41,6 +41,7 @@
     "eslint-plugin-jest": "^21.17.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.9.1",
+    "flow-bin": "^0.74.0",
     "husky": "^0.14.3",
     "npm-install-peers": "^1.2.1"
   },
