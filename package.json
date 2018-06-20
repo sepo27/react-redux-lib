@@ -4,7 +4,7 @@
   "description": "React redux toolbox",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel src --out-dir lib"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,16 @@
   "bugs": {
     "url": "https://github.com/sepo27/react-redux-lib/issues"
   },
-  "homepage": "https://github.com/sepo27/react-redux-lib#readme"
+  "homepage": "https://github.com/sepo27/react-redux-lib#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1"
+  },
+  "peerDependencies": {
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2"
+  }
 }
