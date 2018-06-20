@@ -6,6 +6,8 @@
   "scripts": {
     "lint:es-sel": "eslint --config ./.eslintrc --ext .js --ext .jsx",
     "lint:es": "npm run lint:es-sel src webpack",
+    "flow": "flow check src",
+    "flow-typed": "flow-typed install -r src && flow-typed install -r src react@16.3.2",
     "build": "babel src --out-dir lib",
     "install-peer": "npm-install-peers",
     "publish": "npm publish",
@@ -42,7 +44,9 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.9.1",
     "flow-bin": "^0.74.0",
+    "flow-typed": "^2.4.0",
     "husky": "^0.14.3",
+    "jest": "^23.1.0",
     "npm-install-peers": "^1.2.1"
   },
   "peerDependencies": {
