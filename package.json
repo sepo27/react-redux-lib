@@ -11,6 +11,7 @@
     "test": "jest -c jest.config.json src",
     "build": "babel src --out-dir lib",
     "install-peer": "npm-install-peers",
+    "prepublish": "npm run lint:es && npm run flow && npm run test",
     "publish": "npm publish",
     "postinstall": "npm run install-peer",
     "precommit": "./scripts/precommit"
