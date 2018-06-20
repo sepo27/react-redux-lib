@@ -1,10 +1,11 @@
 {
-  "name": "@sepo/react-redux-lib",
+  "name": "@sepo27/react-redux-lib",
   "version": "1.0.0",
   "description": "React redux toolbox",
   "main": "lib/index.js",
   "scripts": {
-    "build": "babel src --out-dir lib"
+    "build": "babel src --out-dir lib",
+    "publish": "npm publish"
   },
   "repository": {
     "type": "git",
