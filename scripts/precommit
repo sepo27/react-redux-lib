@@ -30,6 +30,6 @@ then
   echo "=== Running pre-commit flow..."
   npm run flow
 
-  #echo "\n=== Running pre-commit tests..."
-  #npm run test:unit
+  echo "\n=== Running pre-commit tests..."
+  npm run test
 fi
