@@ -1,3 +1,15 @@
 {
-  "presets": ["es2015", "react", "stage-0"]
+  "presets": ["es2015", "react", "stage-0"],
+  "plugins": [
+    [
+      "css-modules-transform", {
+        "extensions": [".css", ".scss"],
+        "extractCss": {
+            "dir": "./lib",
+            "relativeRoot": "./src/",
+            "filename": "[path]/[name].css"
+          }
+        }
+    ]
+  ]
 }

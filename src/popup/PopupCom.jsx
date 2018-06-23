@@ -7,8 +7,8 @@ import styles from './Popup.scss';
 import {composeStylesTheme} from '../index';
 import type {MouseEventHandler, ReactElementRef} from '../globalTypes';
 
-// TODO: parametrize
-const rootEl = document.getElementById('#popup');
+// TODO: parametrize ?
+const rootEl = document.getElementById('popup');
 
 const ShowStatus = {
   HIDE: 0,
