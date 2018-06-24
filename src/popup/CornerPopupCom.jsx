@@ -7,10 +7,7 @@ import {PopupCom} from './PopupCom';
 import type {PositionT, ReactElementRef} from '../globalTypes';
 import {calculateCornerPopupPosition} from './calculateCornerPopupPosition';
 
-type Props = $Diff<PopupProps, {
-  top: number,
-  left: number,
-}> & {
+type Props = $Diff<PopupProps, {top: number, left: number}> & {
   targetRef: ReactElementRef<*>,
 };
 
@@ -83,21 +80,16 @@ export class CornerPopupCom extends React.Component<Props, State> {
 
   render() {
     const
-      {show, theme, removeTimeout, children, onClick} = this.props,
+      {targetRef, ...popupProps} = this.props,
       {top, left} = this.state;
 
     return (
       <PopupCom
-        show={show}
+        {...popupProps}
         top={top}
         left={left}
-        onClick={onClick}
-        theme={theme}
-        removeTimeout={removeTimeout}
         ref={this.popupRef}
-      >
-        {children}
-      </PopupCom>
+      />
     );
   }
 }

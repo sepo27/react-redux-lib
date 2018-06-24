@@ -29,10 +29,12 @@ type PopupProps = {
   top: number,
   left: number,
   children: React.Node,
-  onClick?: MouseEventHandler,
   theme?: Theme,
   removeTimeout?: number,
   popupRef?: PopupRef,
+  onClick?: MouseEventHandler,
+  onMouseEnter?: MouseEventHandler,
+  onMouseLeave?: MouseEventHandler,
 };
 
 type State = {
@@ -41,6 +43,10 @@ type State = {
 };
 
 class PopupCom extends React.Component<PopupProps, State> {
+  static defaultProps = {
+    removeTimeout: 0,
+  };
+
   static getDerivedStateFromProps(nextProps: PopupProps, state: State) {
     if (nextProps.show !== state.prevShow) {
       const
@@ -52,10 +58,6 @@ class PopupCom extends React.Component<PopupProps, State> {
 
     return null;
   }
-
-  static defaultProps = {
-    removeTimeout: 0,
-  };
 
   state: State;
   theme: Theme;
@@ -89,7 +91,15 @@ class PopupCom extends React.Component<PopupProps, State> {
 
     const
       show = this.state.showStatus === ShowStatus.SHOW,
-      {top, left, children, popupRef, onClick} = this.props,
+      {
+        top,
+        left,
+        children,
+        popupRef,
+        onClick,
+        onMouseEnter,
+        onMouseLeave,
+      } = this.props,
       className = cx(this.theme.container, {
         // $FlowFixMe
         [this.theme.show]: show,
@@ -101,6 +111,8 @@ class PopupCom extends React.Component<PopupProps, State> {
         className={className}
         ref={popupRef}
         onClick={onClick}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
       >
         {children}
       </div>,

@@ -14,7 +14,6 @@
   ],
   "ignore": [
     "flow-typed",
-    "*.test.js",
     "src/globalTypes.js"
   ]
 }
