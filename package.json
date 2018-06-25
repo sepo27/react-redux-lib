@@ -13,7 +13,6 @@
     "build": "babel src --out-dir lib --ignore test.js",
     "install-peer": "npm-install-peers",
     "prepublish": "npm run checks && npm run build",
-    "publish": "npm publish",
     "precommit": "./scripts/precommit"
   },
   "repository": {
