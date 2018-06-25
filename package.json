@@ -10,7 +10,7 @@
     "flow-typed": "flow-typed install -r src && flow-typed install -r src react@16.3.2",
     "test": "jest -c jest.config.json src",
     "checks": "npm run lint:es && npm run flow && npm run test",
-    "build": "babel src --out-dir lib",
+    "build": "babel src --out-dir lib --ignore test.js",
     "install-peer": "npm-install-peers",
     "prepublish": "npm run checks && npm run build",
     "publish": "npm publish",
