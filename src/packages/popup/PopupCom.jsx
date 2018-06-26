@@ -7,10 +7,8 @@ import styles from './Popup.scss';
 import {composeStylesTheme} from '../index';
 import type {MouseEventHandler, ReactElementRef} from '../../globalTypes';
 
+// TODO: move to constructor ?
 const rootEl = document.getElementById('popup');
-if (!rootEl) {
-  throw new Error('Missing #popup container');
-}
 
 const ShowStatus = {
   HIDE: 0,
@@ -118,6 +116,7 @@ class PopupCom extends React.Component<PopupProps, State> {
       >
         {children}
       </div>,
+      // $FlowFixMe
       rootEl,
     );
   }
