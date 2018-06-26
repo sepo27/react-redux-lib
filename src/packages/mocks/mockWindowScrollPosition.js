@@ -1,6 +1,6 @@
 /* @flow */
 
-import type {PositionT} from '../globalTypes';
+import type {PositionT} from '../../globalTypes';
 
 let originalPosition;
 

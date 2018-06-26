@@ -4,7 +4,7 @@
 import * as React from 'react';
 import type {PopupProps, PopupRef} from './PopupCom';
 import {PopupCom} from './PopupCom';
-import type {PositionT, ReactElementRef} from '../globalTypes';
+import type {PositionT, ReactElementRef} from '../../globalTypes';
 import {calculateCornerPopupPosition} from './calculateCornerPopupPosition';
 
 type Props = $Diff<PopupProps, {top: number, left: number}> & {

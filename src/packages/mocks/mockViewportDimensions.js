@@ -1,6 +1,6 @@
 /* @flow */
 
-import type {Dimensions} from '../globalTypes';
+import type {Dimensions} from '../../globalTypes';
 
 let originalDimensions;
 

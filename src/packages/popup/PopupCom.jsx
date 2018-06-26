@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import cx from 'classnames';
 import styles from './Popup.scss';
 import {composeStylesTheme} from '../index';
-import type {MouseEventHandler, ReactElementRef} from '../globalTypes';
+import type {MouseEventHandler, ReactElementRef} from '../../globalTypes';
 
 // TODO: parametrize ?
 const rootEl = document.getElementById('popup');

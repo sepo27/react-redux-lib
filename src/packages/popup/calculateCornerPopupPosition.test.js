@@ -6,7 +6,7 @@ import {
   unmockViewportDimensions,
   mockWindowScrollPosition,
   unmockWindowScrollPosition,
-} from '../index';
+} from '../mocks';
 
 const assertPopupPosition = ({target, popup, expectedPosition}) => {
   // $FlowFixMe

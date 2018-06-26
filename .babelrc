@@ -6,14 +6,15 @@
         "extensions": [".css", ".scss"],
         "extractCss": {
             "dir": "./lib",
-            "relativeRoot": "./src/",
+            "relativeRoot": "./src/packages",
             "filename": "[path]/[name].css"
           }
         }
     ]
   ],
   "ignore": [
-    "flow-typed",
+    "src/flow-typed",
+    "src/dev",
     "src/globalTypes.js"
   ]
 }
