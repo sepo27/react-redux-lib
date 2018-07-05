@@ -61,6 +61,7 @@ class PopupCom extends React.Component<PopupProps, State> {
 
   state: State;
   theme: Theme;
+  hideTimer: ?TimeoutID;
 
   constructor({show, theme = {}}: PopupProps) {
     super();
@@ -78,9 +79,18 @@ class PopupCom extends React.Component<PopupProps, State> {
         this.setState({showStatus: ShowStatus.SHOW}); // eslint-disable-line react/no-did-update-set-state
       });
     } else if (showStatus === ShowStatus.PREPARE_HIDE) {
-      setTimeout(() => {
-        this.setState({showStatus: ShowStatus.HIDE});
+      this.hideTimer = setTimeout(() => {
+        if (this.hideTimer) {
+          this.setState({showStatus: ShowStatus.HIDE});
+        }
       }, this.props.removeTimeout);
+    }
+  }
+
+  componentWillUnmount() {
+    if (this.hideTimer) {
+      clearTimeout(this.hideTimer);
+      this.hideTimer = null;
     }
   }
 
